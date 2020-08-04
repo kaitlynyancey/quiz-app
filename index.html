@@ -4,54 +4,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>National Park Quiz App</title>
+    <link href="https://fonts.googleapis.com/css2?family=Yellowtail&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" />
 </head>
 <body>
     <!--Quiz app header-->
     <header>
-        <h1>U.S. National Parks Quiz</h1>
+        <h1>National Parks Quiz</h1>
     </header>
 
-    <!--Main content will include welcome scree, quiz question screen, and results screen-->
+    <!--Main content will include welcome screen, quiz question screen, and results screen-->
     <main>
-        <section class="content-box">
-        <section class="group">
-            <div>
-                <h3>Question X of 12</h3>
-            </div>
-            <div>
-                <h3>Score: X</h3>
-            </div>
+        <section class="content-box js-question-section">
+            <section class="wrapper">
+                <h2 class="start">Hey Ranger,<br> Test your knowledge of the great National Parks of the United States!</h2>
+            </section>
+            <section class="button">
+                <button class="js-quiz-form">Start Quiz</button>
+            </section>
+            <section class="image">
+                <img src="images/yellowstone.jpg">
+            </section>
         </section>
-        <form>
-            <h2>Question will go here:</h2>
-            <ol>
-                <li>
-                    <input name="answer" type="radio" value="option-a">
-                    <label for="option-a">Option A</label>
-                </li>
-                <li>
-                    <input name="answer" type="radio" value="option-b">
-                    <label for="option-b">Option B</label>
-                </li>
-                <li>
-                    <input name="answer" type="radio" value="option-c">
-                    <label for="option-c">Option C</label>
-                </li>
-                <li>
-                    <input name="answer" type="radio" value="option-d">
-                    <label for="option-d">Option D</label>
-                </li>
-            </ol>
-            <button type="submit">Submit</button>
-        </form>
-    </section>
     </main>
 
 
 
     <!--JS and JQuery scripts-->
+    <script src="https://code.jquery.com/jquery-3.5.1.js"
+    integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+    crossorigin="anonymous"></script>
     <script src="script.js"></script>
 </body>
 </html>
