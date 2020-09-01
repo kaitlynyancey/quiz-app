@@ -220,7 +220,7 @@ function renderPage(match){
             <button class="js-next-question">Next Question</button>
         </section>
         <section class="image">
-            <img src="images/bear.jpg">
+            <img src="images/bear.jpg" alt="Grizzly bear sitting in woods">
         </section>
         `
         $(".js-question-section").html(correctText)
@@ -236,7 +236,7 @@ function renderPage(match){
             <button class="js-next-question">Next Question</button>
         </section>
         <section class="image">
-            <img src="images/compass.jpg">
+            <img src="images/compass.jpg" alt="Hand holding a compass in a forest">
         </section>
         `
         $(".js-question-section").html(incorrectText)
@@ -265,7 +265,7 @@ function showResults(){
         <p>You got ${STORE.score} out of 12 questions correct!</p>
     </section>
     <section class = "image">
-        <img src="images/arch.jpg">
+        <img src="images/arch.jpg" alt="View of Delicate Arch, a natural arch formation in Utah">
     </section>
     <section class="button">
         <button class = "js-reset-quiz">Try again?</button>
