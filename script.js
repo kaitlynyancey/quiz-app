@@ -127,6 +127,14 @@ STORE={
 };
 
 
+//function to start the quiz when button is clicked
+function startButton(){
+    $(".js-quiz-form").on('click', function(event){
+        event.preventDefault();
+        updateQuestion();
+    });
+};
+
 
 //function to insert the new question HTML code
 function updateQuestion(){
@@ -136,7 +144,7 @@ function updateQuestion(){
 
 //function to update the HTML text for the question and answers
 function generateQuestionText(){
-    console.log("generate question in progress...");
+    console.log("generate question");
     const question = STORE.questions[STORE.currentQuestion].question;
     const a = STORE.questions[STORE.currentQuestion].options[0];
     const b = STORE.questions[STORE.currentQuestion].options[1];
@@ -178,16 +186,6 @@ function generateQuestionText(){
 };
 
 
-//function to start the quiz when button is clicked
-function startButton(){
-    $(".js-quiz-form").on('click', function(event){
-        event.preventDefault();
-        updateQuestion();
-    });
-};
-
-
-
 
 
 //function to submit answer choice
@@ -204,11 +202,11 @@ function submitQuestion(){
 function isCorrect(userAnswer){
     const match = (userAnswer == STORE.questions[STORE.currentQuestion].answer);
     console.log(match);
-    isCorrectPage(match);
+    renderPage(match);
 };
 
 //display correct or incorrect results page based on user's answer
-function isCorrectPage(match){
+function renderPage(match){
     if(match){
         STORE.score ++;
         console.log(STORE.score);
@@ -218,11 +216,11 @@ function isCorrectPage(match){
             <h3>You got it!</h3>
             <p>The correct answer is ${STORE.questions[STORE.currentQuestion].answer}.</p>
         </section>
-        <section class="image">
-            <img src="images/bear.jpg">
-        </section>
         <section class="button">
             <button class="js-next-question">Next Question</button>
+        </section>
+        <section class="image">
+            <img src="images/bear.jpg">
         </section>
         `
         $(".js-question-section").html(correctText)
@@ -234,11 +232,11 @@ function isCorrectPage(match){
             <h3>Sorry, wrong answer!</h3>
             <p>The correct answer is ${STORE.questions[STORE.currentQuestion].answer}.</p>
         </section>
-        <section class="image">
-            <img src="images/compass.jpg">
-        </section>
         <section class="button">
             <button class="js-next-question">Next Question</button>
+        </section>
+        <section class="image">
+            <img src="images/compass.jpg">
         </section>
         `
         $(".js-question-section").html(incorrectText)
