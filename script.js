@@ -33,17 +33,17 @@ STORE={
         },
         //4
     {
-        question: "What was the highest recorded temperature at Death Valley (aka the hottest place on Earth)?",
+        question: "What was the highest recorded temperature at Death Valley, the hottest place on Earth?",
         options: [
             "120°F",
-            "127°F",
+            "124°F",
             "134°F",
-            "138°F"],
+            "140°F"],
         answer: "134°F"
         },
         //5
     {
-        question: "Which unusual activity can you participate in while visiting Capitol Reef National park in Utah?",
+        question: "Which unique activity can you participate in while visiting Capitol Reef National park in Utah?",
         options: [
             "Fruit Tree Picking",
             "Donkey Riding",
